@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_clean_ticket"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="@string/action_clean_ticket" />
+    <item
+        android:id="@+id/action_edit_ticket"
+        android:actionLayout="@layout/custom_action_row"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="@string/action_edit_ticket"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_attribute_ticket"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/action_attribute_ticket" />
+    <item
+        android:id="@+id/action_divide_ticket"
+        android:icon="@drawable/ic_baseline_call_split_24"
+        android:title="@string/action_divide_ticket" />
+    <item
+        android:id="@+id/action_move_ticket"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="@string/action_move_ticket" />
+    <item
+        android:id="@+id/action_synchronise_ticket"
+        android:icon="@drawable/ic_baseline_loop_24"
+        android:title="@string/action_synchronise_ticket" />
+</menu>

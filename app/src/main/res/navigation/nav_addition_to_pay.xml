@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_addition_to_pay"
+    app:startDestination="@id/nav_new_charge_fragment">
+
+    <fragment
+        android:id="@+id/nav_new_charge_fragment"
+        android:name="com.amstrong.gaseapp.ui.charge.NewChargeFragment"
+        android:label="Charge"
+        tools:layout="@layout/fragment_new_charge">
+        <action
+            android:id="@+id/navigate_to_payReceiptFragment"
+            app:destination="@id/payReceiptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payReceiptFragment"
+        android:name="com.amstrong.gaseapp.ui.charge.NewSaleFragment"
+        android:label="Pay"
+        tools:layout="@layout/fragment_new_sale" >
+
+        <argument
+            android:name="amount_received"
+            app:argType="string" />
+    </fragment>
+</navigation>

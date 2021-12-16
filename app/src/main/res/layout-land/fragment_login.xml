@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.LoginFragment">
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_o_grill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_pin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_pin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/block_margin_1"
+        android:hint="@string/enter_your_pin"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_logo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/ButtonPrimary"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_marginBottom="@dimen/default_margin"
+        app:layout_constraintStart_toStartOf="@+id/lbl_pin"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_pin"
+        app:layout_constraintBottom_toTopOf="@+id/txt_link_2_email_login"/>
+
+    <TextView
+        android:id="@+id/txt_link_2_email_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/teal_200"
+        style="@style/MediumBoldTextTheme"
+        android:text="@string/use_email"
+        app:layout_constraintBottom_toBottomOf="@+id/img_logo"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_pin"
+        app:layout_constraintStart_toStartOf="@+id/lbl_pin"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_pin"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_pin"
+        app:layout_constraintStart_toStartOf="@+id/lbl_pin"
+        app:layout_constraintTop_toTopOf="@+id/lbl_pin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/ic_avatar"
+            android:title="@string/menu_my_profile" />
+        <item
+            android:id="@+id/nav_waiter"
+            android:icon="@drawable/ic_baseline_family_restroom_24"
+            android:title="@string/menu_salle" />
+        <item
+            android:id="@+id/nav_my_orders"
+            android:icon="@drawable/ic_baseline_fastfood_24"
+            android:title="@string/menu_my_orders" />
+        <item
+            android:id="@+id/nav_my_workstation"
+            android:icon="@drawable/ic_baseline_outdoor_grill_24"
+            android:title="@string/menu_service_traitement" />
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_baseline_category_24"
+            android:title="@string/menu_categories" />
+        <item
+            android:id="@+id/nav_workstations"
+            android:icon="@drawable/ic_baseline_business_center_24"
+            android:title="@string/menu_workstations" />
+        <item
+            android:id="@+id/nav_users"
+            android:icon="@drawable/ic_baseline_groups_24"
+            android:title="@string/menu_manage_users" />
+        <item
+            android:id="@+id/nav_purchase_orders"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="@string/menu_orders" />
+
+
+    </group>
+</menu>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.waiter.WaiterFragment">
+
+    <fragment
+        android:id="@+id/nav_host_menu_pager"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        app:defaultNavHost="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".6"
+        app:navGraph="@navigation/nav_menu_pager" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/nav_host_menu_pager"
+        app:navGraph="@navigation/nav_new_receipt" />
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/ButtonPrimarySquare"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:text="@string/enregistrer"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintEnd_toStartOf="@id/btn_addition"
+        app:layout_constraintStart_toStartOf="@id/fragment2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_addition"
+        style="@style/ButtonPrimarySquare"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:text="@string/addition"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintEnd_toEndOf="@id/fragment2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

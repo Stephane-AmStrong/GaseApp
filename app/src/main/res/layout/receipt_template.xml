@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.charge.ReceiptFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintBottom_toTopOf="@+id/row_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/small_margin_2"
+        android:clipChildren="false"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/row_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin">
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/MediumBoldTextTheme"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="toto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_qte"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/default_margin"
+                />
+
+            <TextView
+                android:id="@+id/txt_qte"
+                style="@style/MediumTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x 1"
+                android:layout_marginEnd="@dimen/default_margin"
+                app:layout_constraintBottom_toBottomOf="@id/txt_name"
+                app:layout_constraintTop_toTopOf="@id/txt_name"
+                app:layout_constraintEnd_toStartOf="@+id/txt_amount"
+                />
+
+            <TextView
+                android:id="@+id/txt_amount"
+                style="@style/MediumTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 000"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_name"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

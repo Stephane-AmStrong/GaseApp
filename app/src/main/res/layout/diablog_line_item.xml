@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"    
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:context=".ui.dialogs.DiablogRecordReceipt">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorWhite"
+        android:theme="@style/Theme.GASEApp.PopupOverlay.Dialog">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_close"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:icon="@drawable/ic_close_24"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintStart_toEndOf="@id/btn_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:popupTheme="@style/Theme.GASEApp.PopupOverlay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/txt_prix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LargeTextTheme"
+        android:text="Prix : 200"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+         />
+
+
+    <TextView
+        android:id="@+id/lbl_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LargeTextTheme"
+        android:text="Quantité :"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prix"
+         />
+
+
+    <EditText
+        android:id="@+id/txt_qte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="4"
+        android:selectAllOnFocus="true"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@id/lbl_quantity"
+        app:layout_constraintStart_toEndOf="@+id/lbl_quantity"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prix" />
+
+
+    <TextView
+        android:id="@+id/header_reduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LargeBoldTextTheme"
+        android:text="Réduction :"
+        android:textColor="?attr/colorPrimary"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_quantity"
+         />
+
+
+    <TextView
+        android:id="@+id/lbl_reduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LargeTextTheme"
+        android:text="Test, 100%"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_reduction"
+        />
+
+
+    <Switch
+        android:id="@+id/switch_reduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_reduction"
+        app:layout_constraintEnd_toEndOf="@+id/txt_qte"/>
+
+    <TextView
+        android:id="@+id/header_impot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LargeBoldTextTheme"
+        android:text="Impôts :"
+        android:textColor="?attr/colorPrimary"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_reduction"
+         />
+
+
+    <TextView
+        android:id="@+id/lbl_impot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LargeTextTheme"
+        android:text="TAXES, 18%"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_impot"
+        />
+
+    <Switch
+        android:id="@+id/switch_impot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_impot"
+        app:layout_constraintEnd_toEndOf="@+id/txt_qte"/>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

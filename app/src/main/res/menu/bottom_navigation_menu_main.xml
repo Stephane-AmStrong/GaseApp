@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item-->
+<!--        android:id="@+id/navigation_home"-->
+<!--        android:icon="@drawable/ic_home"-->
+<!--        android:title="Home" />-->
+
+    <item
+        android:id="@+id/btn_boisson"
+        android:title="Boissons" />
+    <item
+        android:id="@+id/btn_plat"
+        android:title="Plats" />
+    <item
+        android:id="@+id/btn_all"
+        android:icon="@drawable/ic_foursquare_24"
+        android:title="Tout" />
+    <item
+        android:id="@+id/btn_receipt"
+        android:icon="@drawable/ic_receipt_24"
+        android:title="Mes receipts" />
+
+</menu>

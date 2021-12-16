@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.charge.NewSaleFragment">
+
+    <TextView
+        android:id="@+id/txt_amount_paid"
+        style="@style/LargeBoldTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:text="10,00"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toStartOf="@+id/txt_change"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_amount_paid"
+        style="@style/SmallTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/total_pay"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="@id/txt_amount_paid"
+        app:layout_constraintTop_toBottomOf="@id/txt_amount_paid" />
+
+    <TextView
+        android:id="@+id/txt_change"
+        style="@style/LargeBoldTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:text="10,00"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_amount_paid"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/lbl_change"
+        style="@style/SmallTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/monnaie_rendu"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="@id/txt_change"
+        app:layout_constraintTop_toBottomOf="@id/txt_change" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_cash_recieved"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:hint="Reçu envoyé par mail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_e_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_outline_info_16"
+            android:drawablePadding="@dimen/default_padding"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:id="@+id/btn_print"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/block_margin_1"
+        android:padding="@dimen/default_padding"
+        android:drawableLeft="@drawable/ic_print_16"
+        android:text="Imprimer"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_cash_recieved"/>
+
+    <Button
+        android:id="@+id/btn_sale"
+        style="@style/ButtonPrimarySquare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_check_16"
+        android:text="@string/nouvelle_vente"
+        android:drawableTint="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

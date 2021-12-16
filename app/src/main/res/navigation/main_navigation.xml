@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/maile_navigation"
+    app:startDestination="@id/nav_waiter">
+
+
+    <fragment
+        android:id="@+id/nav_users"
+        android:name="com.amstrong.gaseapp.ui.auth.UsersFragment"
+        android:label="GASE App"
+        tools:layout="@layout/fragment_users" />
+
+
+    <fragment
+        android:id="@+id/nav_my_profile"
+        android:name="com.amstrong.gaseapp.ui.auth.MyProfileFragment"
+        android:label="@string/menu_my_profile"
+        tools:layout="@layout/fragment_my_profil" />
+
+
+    <fragment
+        android:id="@+id/nav_waiter"
+        android:name="com.amstrong.gaseapp.ui.waiter.WaiterFragment"
+        android:label="Salle"
+        tools:layout="@layout/fragment_waiter">
+        <action
+            android:id="@+id/navigate_to_theCheckFragment"
+            app:destination="@id/nav_the_check_fragment" />
+        <action
+            android:id="@+id/navigate_to_receiptToDivideFragment"
+            app:destination="@id/receiptToDivideFragment" />
+        <action
+            android:id="@+id/action_nav_waiter_to_nav_my_orders2"
+            app:destination="@id/nav_my_orders" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_workstation"
+        android:name="com.amstrong.gaseapp.ui.workstation.WorkstationFragment"
+        android:label="Poste de travail"
+        tools:layout="@layout/fragment_workstation" />
+    <fragment
+        android:id="@+id/nav_the_check_fragment"
+        android:name="com.amstrong.gaseapp.ui.charge.TheCheckFragment"
+        android:label="Le ticket"
+        tools:layout="@layout/fragment_the_check">
+        <action
+            android:id="@+id/navigate_to_chargeFragment"
+            app:destination="@id/nav_charge_fragment" />
+        <action
+            android:id="@+id/navigate_to_waiter_fragment"
+            app:destination="@id/nav_waiter"
+            app:popUpTo="@+id/nav_waiter"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_charge_fragment"
+        android:name="com.amstrong.gaseapp.ui.charge.ChargeFragment"
+        android:label="Charge"
+        tools:layout="@layout/fragment_charge">
+        <action
+            android:id="@+id/navigateback_to_waiter_fragment"
+            app:destination="@id/nav_waiter"
+            app:popUpTo="@+id/nav_waiter"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_orders"
+        android:name="com.amstrong.gaseapp.ui.waiter.MyOrdersFragment"
+        android:label="@string/menu_my_orders"
+        tools:layout="@layout/fragment_my_orders" />
+    <fragment
+        android:id="@+id/receiptToDivideFragment"
+        android:name="com.amstrong.gaseapp.ui.waiter.ReceiptToDivideFragment"
+        android:label="@string/action_divide_ticket"
+        tools:layout="@layout/fragment_receipt_to_divide" />
+    <fragment
+        android:id="@+id/nav_workstations"
+        android:name="com.amstrong.gaseapp.ui.workstation.ListOfWorkstationsFragment"
+        android:label="@string/menu_workstations"
+        tools:layout="@layout/fragment_list_of_workstations" />
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.amstrong.gaseapp.ui.category.CategoriesFragment"
+        android:label="@string/menu_categories"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/nav_purchase_orders"
+        android:name="com.amstrong.gaseapp.ui.order.OrdersFragment"
+        android:label="@string/menu_orders"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/navigate_to_register_order_fragment"
+            app:destination="@id/nav_make_order_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_make_order_fragment"
+        android:name="com.amstrong.gaseapp.ui.order.RegisterOrderFragment"
+        android:label="@string/menu_make_order"
+        tools:layout="@layout/fragment_register_order" >
+        <action
+            android:id="@+id/navigate_to_orders_Fragment"
+            app:destination="@id/nav_purchase_orders"
+            app:popUpTo="@+id/nav_purchase_orders"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_login_fragment"
+        android:name="com.amstrong.gaseapp.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_registration_fragment"
+        android:name="com.amstrong.gaseapp.ui.auth.MyProfileFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_my_profil" />
+
+
+</navigation>

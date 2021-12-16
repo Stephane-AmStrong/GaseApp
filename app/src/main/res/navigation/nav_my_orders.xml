@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_list_receipts"
+    app:startDestination="@id/listReceiptsFragment">
+
+    <fragment
+        android:id="@+id/listReceiptsFragment"
+        android:name="com.amstrong.gaseapp.ui.waiter.ListReceiptsFragment"
+        android:label="@string/menu_my_orders"
+        tools:layout="@layout/fragment_list_receipts" >
+        <action
+            android:id="@+id/navigate_to_order_details_fragment"
+            app:destination="@id/orderLinesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderLinesFragment"
+        android:name="com.amstrong.gaseapp.ui.waiter.OrdeDetailsFragment"
+        tools:layout="@layout/fragment_list_receipts"
+        android:label="OrderLinesFragment" />
+</navigation>

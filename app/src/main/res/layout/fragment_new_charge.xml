@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.charge.NewChargeFragment">
+
+    <TextView
+        android:id="@+id/txt_amount_due"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10,00"
+        style="@style/LargeBoldTextTheme"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/lbl_amount_due"
+        style="@style/LargeTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Montant total"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_amount_due" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_cash_recieved"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/block_margin_1"
+        android:hint="@string/especes_recus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_amount_due">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_cash_recieved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_outline_payments_16"
+            android:drawablePadding="@dimen/default_padding"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_charge"
+        style="@style/ButtonPrimarySquare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/block_margin_1"
+        android:layout_marginBottom="@dimen/block_margin_1"
+        android:text="@string/cashin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_cash_recieved" />
+
+<!--predicton
+    <TextView
+        android:id="@+id/btn_cash_received_1"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        style="@style/Button"
+        android:text="1 000"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".30"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_cash_recieved"
+        />
+
+    <TextView
+        android:id="@+id/btn_cash_received_2"
+        style="@style/Button"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:gravity="center|center_horizontal"
+        android:text="2 000"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".30"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cash_received_3"
+        app:layout_constraintStart_toEndOf="@+id/btn_cash_received_1"
+        app:layout_constraintTop_toBottomOf="@id/lbl_cash_recieved" />
+
+    <TextView
+        android:id="@+id/btn_cash_received_3"
+        style="@style/Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="5 000"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".30"
+        android:gravity="center|center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_charge"
+        app:layout_constraintTop_toBottomOf="@id/lbl_cash_recieved" />
+
+    <TextView
+        android:id="@+id/btn_card"
+        style="@style/Button"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center|center_horizontal"
+        android:text="par carte :"
+        app:layout_constraintEnd_toEndOf="@+id/btn_charge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_cash_received_1" />
+-->
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

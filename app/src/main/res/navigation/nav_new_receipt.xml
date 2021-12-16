@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_shift"
+    app:startDestination="@id/shiftFragment">
+
+    <fragment
+        android:id="@+id/shiftFragment"
+        android:name="com.amstrong.gaseapp.ui.waiter.ReceiptCreationFragment"
+        android:label="fragment_receipt"
+        tools:layout="@layout/fragment_receipt" />
+</navigation>

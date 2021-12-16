@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardPreventCornerOverlap="true"
+        android:id="@+id/card_menu">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_item"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/match_constraint"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_meal_name"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="meal_name"
+                android:padding="8dp"
+                style="@style/SmallBoldTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/img_item"
+                app:layout_constraintStart_toEndOf="@+id/img_item"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_waiter_name"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="waiter_name"
+                android:padding="8dp"
+                style="@style/SmallBoldTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/img_item"
+                app:layout_constraintStart_toEndOf="@+id/img_item"
+                app:layout_constraintTop_toBottomOf="@+id/txt_meal_name" />
+
+            <TextView
+                android:id="@+id/txt_receipt_name"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="receipt_name"
+                android:padding="8dp"
+                style="@style/SmallBoldTextTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/img_item"
+                app:layout_constraintStart_toEndOf="@+id/img_item"
+                app:layout_constraintTop_toBottomOf="@+id/txt_waiter_name" />
+
+            <TextView
+                android:id="@+id/txt_receipt_time"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="receipt_time"
+                android:padding="8dp"
+                style="@style/SmallBoldTextTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/img_item"
+                app:layout_constraintStart_toEndOf="@+id/img_item"
+                app:layout_constraintTop_toBottomOf="@+id/txt_receipt_name" />
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

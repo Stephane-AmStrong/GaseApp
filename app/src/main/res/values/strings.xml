@@ -1,0 +1,195 @@
+<resources>
+    <string name="app_name">SÊDOHOUN</string>
+    <string name="key_store">e376039f-4e8d-49e8-90a7-6f2393d77111</string>
+    <string name="key_payement_type">2727ac13-151f-4906-b387-587214a8963b</string>
+    <!--    <string name="key_payement_type_test">da017166-7d76-4b5f-bea1-61a225bb7bc0</string>-->
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_clean_ticket">Effacer le ticket</string>
+    <string name="action_cancel_ticket">Annuler le ticket</string>
+    <string name="action_save">Enregister</string>
+    <string name="action_delete_ticket">Supprimer le ticket</string>
+    <string name="action_merge_ticket">Fusionner le ticket</string>
+    <string name="action_register">Enregistrer</string>
+    <string name="action_create">Créer</string>
+    <string name="action_register_order_line">Enregistrer</string>
+    <string name="action_place_order">Créer</string>
+    <string name="action_save_as_draft">Sauvegarder comme brouillon</string>
+    <string name="action_print_accounting_charge_sheet">Imprimer La Fiche d\'imputation</string>
+    <string name="action_cancel">Annuler</string>
+    <string name="action_delete_order">Supprimer cette commande</string>
+
+    <string name="action_proceed">Procéder</string>
+    <string name="action_forward_ticket">Transferer le ticket</string>
+    <string name="action_edit_ticket">Modifier le ticket</string>
+    <string name="action_attribute_ticket">Attribuer le ticket</string>
+    <string name="hint_source_ticket">Ticket source</string>
+    <string name="hint_destination_ticket">Ticket destination</string>
+    <string name="action_divide_ticket">Diviser le ticket</string>
+    <string name="action_move_ticket">Déplacer le ticket</string>
+    <string name="action_synchronise_ticket">Synchroniser le ticket</string>
+    <!--    <string name="action_settings">Settings</string>-->
+
+    <string name="menu_my_profile">Mon profil</string>
+    <string name="menu_salle">Salle</string>
+    <string name="menu_service_traitement">Service Traiteur</string>
+    <string name="menu_my_orders">Mes commandes</string>
+    <string name="menu_add_user">Enregister un utilisateur</string>
+    <string name="menu_manage_users">Gestion des utilisateurs</string>
+    <string name="menu_workstations">Gestion des postes de travail</string>
+    <string name="menu_categories">Gestion des categories</string>
+    <string name="menu_orders">Les approvisionnements</string>
+    <string name="menu_make_order">Passer une commande</string>
+    <string name="menu_add_order_line">Ajouter un article à la commande</string>
+
+
+    <string name="don_t_have_an_account_register_now">Don\'t have an account? <b>Register Now</b></string>
+    <string name="enter_your_pin">Entrez votre pin</string>
+    <string name="enter_your_email">Entrez votre email</string>
+    <string name="email">email</string>
+    <string name="description">Description</string>
+    <string name="hint_email">john@mail.czom</string>
+    <string name="hint_phone">N° téléphone</string>
+    <string name="pin_hint">1111</string>
+    <string name="code_pin">code pin</string>
+    <string name="code_pin_confirm">confirmer le pin</string>
+    <string name="login">Login</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+    <string name="already_have_an_account_login_now">Already have an account? <b>Login Now</b></string>
+    <string name="selectionner_employe">Selectionner un employé</string>
+    <string name="order_pickup">Récuperation de plat</string>
+    <string name="there_are_pending_dishes">il y a des plats en attentes</string>
+    <string name="payment_done">Paiement effectué</string>
+    <string name="ticket_declared">Ticket normalisé</string>
+    <string name="order_recorded">commande enregistrée</string>
+    <string name="dish_pending">En attente</string>
+    <string name="dish_ready">Prêt</string>
+    <string name="dish_served">Servi</string>
+    <string name="account_disabled">désactivé</string>
+    <string name="ticket_successfully_split">Ticket divisé avec succès</string>
+    <string name="ticket_successfully_merged">Tickets fusionnés avec succès</string>
+    <string name="ticket_successfully_printed">Facture imprimée avec succès</string>
+    <string name="error_during_payment">Une erreur est survenue lors du paiement</string>
+    <string name="error_during_normalization">Une erreur est survenue lors de la normalisation</string>
+    <string name="error_during_printing">Une erreur est survenue lors de l\'impression</string>
+    <string name="error_loading_tickets">Erreur lors du chargement des tickets</string>
+    <string name="error_loading_users">Erreur lors du chargement des utilisateurs</string>
+    <string name="error_merging_tickets">Erreur lors de la fusion des tickets</string>
+    <string name="error_select_category">veuillez selectionner une catégorie</string>
+    <string name="error_check_your_network">Veuillez vérifier votre accès au réseau</string>
+
+    <string name="selectionner_date">Selectionner une date</string>
+    <string name="selectionner_ticket">Selectionner un ticket</string>
+    <string name="enregistrer_ticket">Enregistrer le ticket</string>
+    <string name="enregistrer">ENREGISTRER</string>
+    <string name="hint_admin_creation">Créer l\'administrateur</string>
+    <string name="nom">Nom</string>
+    <string name="hint_item">Article</string>
+    <string name="hint_store">Entrepôt</string>
+    <string name="hint_order_on">Commander le</string>
+    <string name="hint_expected_on">Attendu pour le</string>
+    <string name="hint_note">Note</string>
+    <string name="hint_reference">Référence</string>
+    <string name="hint_supplier">Fournisseur</string>
+    <string name="error_field_required">Erreur, champ requis</string>
+    <string name="error_pin_mismatch">Erreur, pins non concordants</string>
+
+    <string name="ecrire_commentaire">Ecrire un commentaire</string>
+    <string name="create_ticket">créer un nouveau ticket</string>
+    <string name="montant_insuffisant">Montant insuffisant</string>
+    <string name="donnee_requise">Donnée requise</string>
+    <string name="ticket_ouvert">Tickets ouverts</string>
+    <string name="a_payer">A PAYER</string>
+    <string name="nouvelle_vente">Nouvelle vente</string>
+    <string name="addition">ADDITION</string>
+    <string name="cashin">ENCAISSER</string>
+    <string name="error_dish_is_being_processed">Ce plat est déjà en cours de traitement.</string>
+    <string name="error_dish_not_ready_yet">n\'est pas encore prêt</string>
+    <string name="imprimer_ticket">Valider et imprimer reçu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="cabar_title">My action bar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="total_pay">Total payé</string>
+    <string name="monnaie_rendu">Monnaie rendu</string>
+    <string name="especes_recus">Espèces reçus</string>
+    <string name="txt_serve">Servir</string>
+    <string name="edit_user">Editer</string>
+    <string name="disable_user">Désactier</string>
+    <string name="enable_user">Résactier</string>
+    <string name="action_delete_user">Supprimer ce compte</string>
+    <string name="reset_user_pin">Réinitialiser le PIN</string>
+    <string name="delete_workstation">Supprimer ce poste de travail</string>
+
+    <string name="switch_take_orders">Prendre des commande</string>
+    <string name="switch_serve_drinks_or_prepare_meals">Préparer nourritures et boissons</string>
+    <string name="switch_cashin">En caisser</string>
+    <string name="switch_manage_purchase_order">Gérer les achats vente</string>
+    <string name="switch_manage_hall">Gérer la salle</string>
+    <string name="switch_manage_kitchen">Gérer la cuisisne</string>
+    <string name="switch_manage_users">Gérer les utilisateurs</string>
+    <string name="switch_manage_workstations">Gérer les postes de travail</string>
+    <string name="switch_manage_categories">Gérer les catégories</string>
+
+    <string name="switch_available_4_sale">Disponible pour la vente</string>
+
+
+    <string name="error_plz_select_an_addition">Veuillez sélectionner une addition</string>
+    <string name="error_pin_required">Code-Pin requis</string>
+    <string name="error_user_name_required">Nom d\'utilisateur requis</string>
+    <string name="error_category_name_required">Nom de catégorie requis</string>
+    <string name="error_workstation_name_required">Nom du poste requis</string>
+    <string name="error_email_required">Email requis</string>
+    <string name="user_creation">Ajout d\'utilisateur</string>
+    <string name="user_edition">Edition d\'utilisateur</string>
+    <string name="category_edition">Edition de categorie</string>
+    <string name="workstation_creation">Ajout de poste de travail</string>
+    <string name="workstation_edition">Edition de poste de travail</string>
+    <string name="channel_name">Gase Notification</string>
+    <string name="channel_description">les notifications Gase App</string>
+    <string name="use_email"><u>utiliser son email à la place</u></string>
+    <string name="use_pin"><u>utiliser son pin à la place</u></string>
+    <string name="error_pu_required">Prix unitaire requis</string>
+    <string name="error_qtes_dont_match">Les quantités doivent correspondre</string>
+
+    <string name="pattern_dates">Commandé le %1$s pour le %2$s</string>
+    <string name="pattern_received_ratio">%1$s/%2$s</string>
+    <string name="pattern_qte_ordered">%1$s</string>
+    <string name="pattern_qte_ordered_old">%1$s x %2$s = %2$s</string>
+    <string name="hint_in_stock">En stock</string>
+    <string name="hint_incoming">En attente</string>
+    <string name="hint_amount">Montant</string>
+    <string name="hint_unit_cost">Coût unitaire</string>
+    <string name="hint_average_cost">coût moyen</string>
+    <string name="hint_quantity_ordered">Qte cmd</string>
+    <string name="hint_quantity_received">Qte reçue</string>
+
+    <string name="order_status_draft">Draft</string>
+    <string name="order_status_pending">Pending</string>
+    <string name="order_status_partially_received">Partially received</string>
+    <string name="order_status_closed">Closed</string>
+    <string name="msg_not_allowed_to_diminish">Vous n\'êtes pas autorisé à diminuer la quantité commandée</string>
+    <string name="error_order_closed">Cette commande a été clôturée, elle ne peut plus être modifiée</string>
+    <string name="error_item_unavailable">Rupture de stock de %1$s</string>
+
+    <string name="administrator_workstation">ADMINISTRATOR</string>
+    <string name="selectionner_intervalle_date">Sélectionnez intervalle de temps</string>
+    <string name="pattern_interval_of_time">%1$s - %2$s</string>
+
+
+    <string-array name="dining_option">
+        <item>Sur place</item>
+        <item>A emporter</item>
+        <item>A livrer</item>
+    </string-array>
+
+
+</resources>

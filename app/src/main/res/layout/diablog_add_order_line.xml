@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:behavior_peekHeight="7000dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:context=".ui.dialogs.DialogAddOrderLine">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorWhite"
+        android:theme="@style/Theme.GASEApp.PopupOverlay.Dialog">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_close"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:icon="@drawable/ic_close_24"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:menu="@menu/add_order_line"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintStart_toEndOf="@id/btn_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:popupTheme="@style/Theme.GASEApp.PopupOverlay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_item_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:hint="@string/hint_item"
+        android:layout_marginEnd="@dimen/default_margin">
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_item"
+            android:layout_width="match_parent"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
+            android:layout_height="50dp"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_in_stock"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_in_stock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_item_name"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".28">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_in_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_average_cost"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_average_cost"
+        app:layout_constraintBottom_toBottomOf="@id/lbl_in_stock"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_amount"
+        app:layout_constraintStart_toEndOf="@+id/lbl_in_stock"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".28">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_average_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_amount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_amount"
+        app:layout_constraintBottom_toBottomOf="@id/lbl_in_stock"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_item_name"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".28"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/lbl_cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_unit_cost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_in_stock"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".28">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_ordered"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:hint="@string/hint_quantity_ordered"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_reveived"
+        app:layout_constraintStart_toEndOf="@+id/lbl_cost"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_amount"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".28">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_quantity_ordered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="1"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_size_small" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lbl_reveived"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:hint="@string/hint_quantity_received"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_amount"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".28">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_quantity_reveived"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:text="0"
+            android:textSize="@dimen/text_size_small" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/lbl_item_name"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
